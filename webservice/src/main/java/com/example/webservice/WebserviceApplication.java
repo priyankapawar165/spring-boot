@@ -8,18 +8,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-
 @SpringBootApplication
 @RestController
 public class WebserviceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(WebserviceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(WebserviceApplication.class, args);
+    }
 
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.build();
-	}
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        return builder.build();
+    }
 
 }
