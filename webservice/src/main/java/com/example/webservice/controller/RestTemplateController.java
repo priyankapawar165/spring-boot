@@ -17,6 +17,5 @@ public class RestTemplateController {
     @GetMapping("/posts")
     public List<Post> getPosts() {
         return restTemplateService.getPost();
-
     }
 }
