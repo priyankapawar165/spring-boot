@@ -27,4 +27,15 @@ public class EmployeeDaoImplTest {
         List<Employee> employees = employeeDao.getEmployeeList();
         assertEquals("Tom", employees.get(0).getFirstName());
     }
+
+    @Test
+    public void  testAddEmployee(){
+        Employee employee = new Employee();
+        employee.setFirstName("Sara");
+        employee.setId(1);
+        when(repository.save(employee)).thenReturn(employee);
+       Employee actualEmployee= employeeDao.addEmployee(employee);
+        assertEquals("Sara", actualEmployee.getFirstName());
+        assertEquals(1, actualEmployee.getId());
+    }
 }

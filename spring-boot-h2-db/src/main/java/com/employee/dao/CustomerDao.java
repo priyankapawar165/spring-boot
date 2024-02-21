@@ -6,5 +6,7 @@ import com.employee.dto.Customer;
 
 public interface CustomerDao {
   public List<Customer> getCustomerList();
+
+  public Customer addCustomer(Customer customer);
   
 }

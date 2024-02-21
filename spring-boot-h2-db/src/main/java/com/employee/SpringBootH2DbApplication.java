@@ -9,5 +9,4 @@ public class SpringBootH2DbApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootH2DbApplication.class, args);
 	}
-
 }

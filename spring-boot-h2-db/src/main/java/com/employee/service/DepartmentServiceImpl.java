@@ -17,4 +17,9 @@ public class DepartmentServiceImpl implements DepartmentService{
   public List<Department> getDepartmentList(){
     return departmentDao.getDepartmentList();
   }
+
+  public Department addDepartment (Department department){
+    return departmentDao.addDepartment(department);
+    
+  }
 }

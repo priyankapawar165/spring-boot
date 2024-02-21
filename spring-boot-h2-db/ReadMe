@@ -1,0 +1,111 @@
+Architecture
+
+Flow - Request : controller-> service -> dao
+       Response:  dao -> service -> controller
+Task 1 -
+1.Generate the boilerplate code using the spring initializer
+2.Import project into Intellij
+3.Created packages - controller, service, dto, dao
+5.Created controller class - EmployeeController
+6.Create class and interface for service layer - EmployeeService as interface and EmployeeServiceImpl as class
+7.Create class and interface for dao layer - EmployeeDao as interface and EmployeeDaoImpl as class
+
+Task 2 -
+1.Create a controller for Student as StudentController
+2.This controller should return the list of the students
+
+
+Task 3.
+Connect to DB
+Steps:1
+
+Configure H2B connection details in property file
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.properties.hibernate.show_sql=true
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+Step2: In dto class
+
+@Table(name = "employee")
+@Entity
+
+
+  @Id
+  @GeneratedValue
+  private int id;
+
+
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+
+
+  Step 3:
+  Create repository interface
+
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+
+}
+
+
+Step 4.
+in DAO layer - get data from repository 
+
+@Autowired
+EmployeeRepository employeeRepository;
+
+comment out harded code
+
+call findAll() on employeeRepository
+
+and return the same which is given by findAll()
+
+step 5.
+Access H2 endpoint:
+http://localhost:8080/h2-console
+
+INSERT INTO EMPLOYEE (id, ADDRESS ,EMAIL_ADDRESS ,FIRST_NAME ,LAST_NAME,PHONE_NUMBER ) VALUES (1, 'Pune','Riya@gmail.com','Riya','pawar','123456');
+INSERT INTO EMPLOYEE (id, ADDRESS ,EMAIL_ADDRESS ,FIRST_NAME ,LAST_NAME,PHONE_NUMBER ) VALUES (2, 'Mumbai','Amber@gmail.com','Amber','pawar','444444');
+
+INSERT INTO STUDENT (id, FIRST_NAME ,LAST_NAME, GRADE, CLASS_TEACHER, PERSONAL_INFO) VALUES (1,'Ram','pawar','10', 'Madhu', 'Parents');
+INSERT INTO STUDENT (id, FIRST_NAME ,LAST_NAME, GRADE, CLASS_TEACHER, PERSONAL_INFO) VALUES (2,'Laxman','pawar','10', 'Madhu', 'Parents');
+
+INSERT INTO CUSTOMER (id, FIRST_NAME ,LAST_NAME, ADRESS, PHONE_NUMBER) VALUES (1,'Shyam','pawar', 'Madhu Sadan', '12345');
+INSERT INTO CUSTOMER (id, FIRST_NAME ,LAST_NAME, ADRESS, PHONE_NUMBER) VALUES (2,'Radha','pawar', 'Madhu Nivas', '23456');
+
+
+Task 4.
+
+Create a test class in controller package like StudentControllerTest
+Use the @WebMVCTest annotation at class level
+Autowired MockMvc that is used to call an endpoint and assert the Response
+use Mockbean annotation for depend services
+mock a method of Mockbean class which is inside your actual controller method
+
+
+Task 5.
+create a test class in service package like StudentServiceImpl
+Use this annotation class level - @ExtendWith(MockitoExtension.class)
+Use @InjectMocks for actual service
+Use mock bean for for dependent class like @autowired class
+mock a method of mock class which is inside your actual service method.
+
+
+Task 6.
+create a test class in dao package like StudentDaoImpl
+Use this annotation class level - @ExtendWith(MockitoExtension.class)
+Use @InjectMocks for actual dao
+Use mock bean for for dependent class like @autowired class
+mock a method of mock class which is inside your actual dao method.

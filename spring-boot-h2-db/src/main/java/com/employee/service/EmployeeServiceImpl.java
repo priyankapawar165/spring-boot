@@ -16,4 +16,8 @@ public class EmployeeServiceImpl implements EmployeeService{
     public List<Employee> getEmployeeList(){
            return employeeDao.getEmployeeList();
     }
+
+    public Employee addEmployee(Employee employee){
+        return employeeDao.addEmployee(employee);
+    }
 }
