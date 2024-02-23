@@ -2,6 +2,7 @@ package com.employee.dao;
 
 import com.employee.dto.Student;
 
+import com.employee.repository.StudentRepository;
 import com.employee.service.StudentService;
 import com.employee.service.StudentServiceImpl;
 import org.junit.jupiter.api.Test;
@@ -21,11 +22,11 @@ import static org.mockito.Mockito.when;
 public class StudentDaoImplTest {
 
     @InjectMocks
-    private StudentService studentService = new StudentServiceImpl();
+    private StudentDao studentDao = new StudentDaoImpl();
 
 
     @Mock
-    private StudentDao studentDao;
+    private StudentRepository studentRepository;
 
     @Test
     public void getStudentList(){
@@ -36,9 +37,18 @@ public class StudentDaoImplTest {
         list.add(student);
 
         when(studentDao.getStudentList()).thenReturn(list);
-        List<Student> students = studentService.getStudentList();
+        List<Student> students = studentDao.getStudentList();
         assertEquals("Sam", students.get(0).getFirstName());
     }
-
+    @Test
+    public void testAddStudent(){
+        Student student = new Student();
+        student.setFirstName("Suraj");
+        student.setId(1);
+        when(studentRepository.save(student)).thenReturn(student);
+        Student actualStudent = studentDao.addStudent(student);
+        assertEquals("Suraj", actualStudent.getFirstName());
+        assertEquals(1, actualStudent.getId());
+    }
 
 }

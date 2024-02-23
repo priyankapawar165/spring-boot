@@ -8,16 +8,26 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     EmployeeDao employeeDao;
 
-    public List<Employee> getEmployeeList(){
-           return employeeDao.getEmployeeList();
+    public List<Employee> getEmployeeList() {
+        return employeeDao.getEmployeeList();
     }
 
-    public Employee addEmployee(Employee employee){
+    public Employee addEmployee(Employee employee) {
         return employeeDao.addEmployee(employee);
     }
+
+
+    public void deleteEmployee(int id) {
+         employeeDao.deleteEmployee(id);
+    }
+
+    public Employee updateEmployee(Employee employee) {
+        return employeeDao.updateEmployee(employee);
+    }
+
 }

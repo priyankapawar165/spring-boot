@@ -10,6 +10,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
@@ -33,10 +34,30 @@ public class CustomerServiceImplTest {
     list.add(customer );
 
     when(customerDao.getCustomerList()).thenReturn(list);
-    List<Customer> students = customerService.getCustomerList();
+    List<Customer> customers = customerService.getCustomerList();
 
-    assertEquals("Sam", students.get(0).getFirstName());
+    assertEquals("Sam", customers.get(0).getFirstName());
     
   }
+  @Test
+  public void testAddCustomer(){
+    Customer customer = new Customer();
+    customer.setId(7);
+    customer.setFirstName("Raha");
+    customer.setLastname("Ching");
+    customer.setAddress("Ram Road");
+    customer.setPhoneNumber("1234");
+
+    when(customerDao.addCustomer(customer)).thenReturn(customer);
+
+    Customer customers = customerService.addCustomer(customer);
+    assertEquals(7, customers.getId());
+    assertEquals("Raha", customers.getFirstName());
+    assertEquals("Ching", customers.getLastName());
+    assertEquals("Ram Road", customers.getAddress());
+    assertEquals("1234", customers.getPhoneNumber());
+    }
+
+  }
   
-}
+

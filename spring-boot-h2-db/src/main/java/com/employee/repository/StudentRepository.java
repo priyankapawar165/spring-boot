@@ -5,4 +5,5 @@ import com.employee.dto.Student;
 
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 
+
 }

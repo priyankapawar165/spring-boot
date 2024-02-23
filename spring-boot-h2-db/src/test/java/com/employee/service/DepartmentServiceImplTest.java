@@ -35,6 +35,22 @@ public class DepartmentServiceImplTest {
         List<Department> departments = departmentService.getDepartmentList();
         assertEquals("R&D", departments.get(0).getDeptName());
     }
+@Test
+    public void testAddDepartment(){
+        Department department = new Department();
+        department.setId(1);
+        department.setDeptName("Logistic");
+        department.setDeptSize("1000");
+        department.setDeptHead("Manjiri");
 
+        when(departmentDao.addDepartment(department)).thenReturn(department);
+
+        Department dept = departmentService.addDepartment(department);
+        assertEquals(1, dept.getId());
+        assertEquals("Logistic", dept.getDeptName());
+        assertEquals("1000", dept.getDeptSize());
+        assertEquals("Manjiri", dept.getDeptHead());
+
+}
 
 }

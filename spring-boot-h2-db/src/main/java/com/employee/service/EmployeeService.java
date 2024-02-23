@@ -10,4 +10,8 @@ public interface EmployeeService {
    
     public Employee addEmployee(Employee employee);
 
+    public void deleteEmployee(int userId);
+
+    public Employee updateEmployee(Employee employee);
+
 }

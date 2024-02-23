@@ -33,9 +33,25 @@ public class EmployeeDaoImplTest {
         Employee employee = new Employee();
         employee.setFirstName("Sara");
         employee.setId(1);
+
         when(repository.save(employee)).thenReturn(employee);
-       Employee actualEmployee= employeeDao.addEmployee(employee);
+        Employee actualEmployee= employeeDao.addEmployee(employee);
+
         assertEquals("Sara", actualEmployee.getFirstName());
         assertEquals(1, actualEmployee.getId());
+    }
+    @Test
+    public void testUpdateEmployee(){
+        Employee employee = new Employee();
+        employee.setFirstName("Sania");
+        employee.setId(2);
+        employee.setLastName("Sharmaa");
+        employee.setAddress("Seeta galli");
+        employee.setEmailAddress("S@S");
+        employee.setPhoneNumber("1234567");
+
+        when(repository.save(employee)).thenReturn(employee);
+        Employee updatedEmployee = employeeDao.addEmployee(employee);
+
     }
 }

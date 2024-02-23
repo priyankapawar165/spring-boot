@@ -31,4 +31,14 @@ public class DepartmentDaoImplTest {
         assertEquals("IT", departmentList.get(0).getDeptName());
 
     }
+    @Test
+    public void testAddDepartment(){
+        Department department = new Department();
+        department.setDeptName("Fashion");
+        department.setId(1);
+        when(departmentRepository.save(department)).thenReturn(department);
+        Department actualDepartment = departmentDao.addDepartment(department);
+        assertEquals("Fashion", actualDepartment.getDeptName());
+        assertEquals(1, actualDepartment.getId());
+    }
 }
