@@ -32,3 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 .DS_Store
+spring-boot-crud-master/.DS_Store
+spring-boot-crud-master/src/.DS_Store
+spring-boot-crud-master/src/main/.DS_Store
+spring-boot-crud-master/src/test/.DS_Store

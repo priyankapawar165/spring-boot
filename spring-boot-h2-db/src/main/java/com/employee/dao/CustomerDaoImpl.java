@@ -18,5 +18,9 @@ public class CustomerDaoImpl implements CustomerDao{
   public List<Customer> getCustomerList(){
     return customerRepository.findAll();
 }
+
+public Customer addCustomer (Customer customer){
+  return customerRepository.save(customer);
+}
   
 }

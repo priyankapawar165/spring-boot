@@ -15,5 +15,11 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getStudentList(){
       return studentDao.getStudentList();
   }
-  
+
+  public Student addStudent(Student student){
+    return studentDao.addStudent(student);
+   }
+
+
+
 }
