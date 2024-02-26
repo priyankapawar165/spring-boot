@@ -82,8 +82,12 @@ INSERT INTO EMPLOYEE (id, ADDRESS ,EMAIL_ADDRESS ,FIRST_NAME ,LAST_NAME,PHONE_NU
 INSERT INTO STUDENT (id, FIRST_NAME ,LAST_NAME, GRADE, CLASS_TEACHER, PERSONAL_INFO) VALUES (1,'Ram','pawar','10', 'Madhu', 'Parents');
 INSERT INTO STUDENT (id, FIRST_NAME ,LAST_NAME, GRADE, CLASS_TEACHER, PERSONAL_INFO) VALUES (2,'Laxman','pawar','10', 'Madhu', 'Parents');
 
-INSERT INTO CUSTOMER (id, FIRST_NAME ,LAST_NAME, ADRESS, PHONE_NUMBER) VALUES (1,'Shyam','pawar', 'Madhu Sadan', '12345');
-INSERT INTO CUSTOMER (id, FIRST_NAME ,LAST_NAME, ADRESS, PHONE_NUMBER) VALUES (2,'Radha','pawar', 'Madhu Nivas', '23456');
+INSERT INTO CUSTOMER (id, FIRST_NAME ,LAST_NAME, ADDRESS, PHONE_NUMBER) VALUES (1,'Shyam','pawar', 'Madhu Sadan', '12345');
+INSERT INTO CUSTOMER (id, FIRST_NAME ,LAST_NAME, ADDRESS, PHONE_NUMBER) VALUES (2,'Radha','pawar', 'Madhu Nivas', '23456');
+
+INSERT INTO DEPARTMENT (id, DEPT_NAME ,DEPT_SIZE, DEPT_HEAD) VALUES (1,'IT','1000', 'Madhu Sadan');
+INSERT INTO DEPARTMENT (id, DEPT_NAME ,DEPT_SIZE, DEPT_HEAD) VALUES (2,'R&D','500', 'Madhu Nivas');
+
 
 
 Task 4.
@@ -96,12 +100,13 @@ mock a method of Mockbean class which is inside your actual controller method
 
 
 Task 5.
-create a test class in service package like StudentServiceImpl
+create a test class in service package like StudentServiceImplTest
 Use this annotation class level - @ExtendWith(MockitoExtension.class)
 Use @InjectMocks for actual service
 Use mock bean for for dependent class like @autowired class
 mock a method of mock class which is inside your actual service method.
-
+call a actual method of service
+and assert it
 
 Task 6.
 create a test class in dao package like StudentDaoImpl
@@ -109,3 +114,5 @@ Use this annotation class level - @ExtendWith(MockitoExtension.class)
 Use @InjectMocks for actual dao
 Use mock bean for for dependent class like @autowired class
 mock a method of mock class which is inside your actual dao method.
+
+https://github.com/RameshMF/springboot-docker-course/blob/main/springboot-restful-webservices/src/main/java/net/javaguides/springboot/service/impl/UserServiceImpl.java
