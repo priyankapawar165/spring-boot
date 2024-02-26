@@ -2,6 +2,7 @@ package com.employee.controller;
 
 import com.employee.dto.Employee;
 import com.employee.service.EmployeeService;
+import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,8 +28,8 @@ public class EmployeeController {
         return employeeService.updateEmployee(employee);
     }
 
-    @DeleteMapping("/employee-delete")
-    public String deleteEmployee(int id) {
+    @DeleteMapping("/employee-delete/{id}")
+    public String deleteEmployee(@PathVariable("id") int id) {
          employeeService.deleteEmployee(id);
          return "Employee is deleted";
     }
