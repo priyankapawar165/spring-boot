@@ -1,9 +1,0 @@
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/common-dtos/src/main/java/com/javatechie/saga/commons/dto/OrderRequestDto.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/common-dtos/src/main/java/com/javatechie/saga/commons/event/OrderStatus.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/common-dtos/src/main/java/com/javatechie/saga/commons/dto/OrderResponseDto.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/common-dtos/src/main/java/com/javatechie/saga/commons/dto/PaymentRequestDto.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/common-dtos/src/main/java/com/javatechie/saga/commons/CommonsDtoApplication.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/common-dtos/src/main/java/com/javatechie/saga/commons/event/OrderEvent.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/common-dtos/src/main/java/com/javatechie/saga/commons/event/PaymentStatus.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/common-dtos/src/main/java/com/javatechie/saga/commons/event/Event.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/common-dtos/src/main/java/com/javatechie/saga/commons/event/PaymentEvent.java

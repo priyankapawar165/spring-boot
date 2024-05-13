@@ -1,9 +1,0 @@
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/order-service/src/main/java/com/javatechie/saga/order/repository/OrderRepository.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/order-service/src/main/java/com/javatechie/saga/order/controller/OrderController.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/order-service/src/main/java/com/javatechie/saga/order/config/OrderStatusUpdateHandler.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/order-service/src/main/java/com/javatechie/saga/order/entity/PurchaseOrder.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/order-service/src/main/java/com/javatechie/saga/order/config/EventConsumerConfig.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/order-service/src/main/java/com/javatechie/saga/order/config/OrderPublisherConfig.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/order-service/src/main/java/com/javatechie/saga/order/OrderServiceApplication.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/order-service/src/main/java/com/javatechie/saga/order/service/OrderStatusPublisher.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/order-service/src/main/java/com/javatechie/saga/order/service/OrderService.java

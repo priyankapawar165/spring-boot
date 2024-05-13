@@ -1,7 +1,0 @@
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/payment-service/src/main/java/com/javatechie/saga/payment/entity/UserBalance.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/payment-service/src/main/java/com/javatechie/saga/payment/entity/UserTransaction.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/payment-service/src/main/java/com/javatechie/saga/payment/service/PaymentService.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/payment-service/src/main/java/com/javatechie/saga/payment/PaymentServiceApplication.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/payment-service/src/main/java/com/javatechie/saga/payment/repository/UserBalanceRepository.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/payment-service/src/main/java/com/javatechie/saga/payment/config/PaymentConsumerConfig.java
-/Users/priya/git-final/spring-boot/spring-boot-saga-choreography-pattern/payment-service/src/main/java/com/javatechie/saga/payment/repository/UserTransactionRepository.java
